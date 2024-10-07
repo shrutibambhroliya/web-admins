@@ -2,10 +2,13 @@ import React from "react";
 import "./AddItems.css";
 
 const AddItems = () => {
+  const createProduct = async (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
       <div className="px-[75px] py-[30px]">
-        <form className="flex flex-col gap-3">
+        <form onSubmit={createProduct} className="flex flex-col gap-3">
           <h2 className="mb-2">Upload Image</h2>
           <div className="flex gap-2  ">
             <button className="container-btn-file border-dotted border-2 px-5 py-3 border-gray-300 ">

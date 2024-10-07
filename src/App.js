@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
+import CategoryList from "./Components/CategoryList";
 import {
   BrowserRouter as Router,
   Routes,

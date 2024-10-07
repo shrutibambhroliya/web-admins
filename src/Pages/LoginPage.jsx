@@ -13,7 +13,6 @@ const LoginPage = ({ setIsAuthenticated }) => {
     setUserName("");
     setEmail("");
     setPassword("");
-
     setLoader(true);
 
     try {
@@ -28,8 +27,14 @@ const LoginPage = ({ setIsAuthenticated }) => {
       if (login.ok) {
         const data = await login.json();
         console.log("data", data);
+
         const token = data.data.accessToken;
         localStorage.setItem("token", token);
+
+        const role = data.data.user.role;
+        localStorage.setItem("role", role);
+        console.log("role", role);
+
         setIsAuthenticated(true);
         navigate("/");
       } else {
@@ -39,7 +44,9 @@ const LoginPage = ({ setIsAuthenticated }) => {
     } catch (error) {
       console.log("Error:", error);
     } finally {
-      setLoader(false);
+      setTimeout(() => {
+        setLoader(false);
+      }, 2000);
     }
   };
 
