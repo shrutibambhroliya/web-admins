@@ -146,9 +146,9 @@ const CategoryList = ({ setLoading }) => {
       <div className="relative">
         <div className={`${editCategoryForm ? "opacity-50" : ""}`}>
           <div className="flex justify-between items-center px-5 py-3 bg-slate-100 mb-3 ">
-            <h1 className="text-[25px] font-semibold">Categories</h1>
+            <h1 className="text-[25px]  outfit-uniqueClass">Categories</h1>
           </div>
-          <div className="grid  grid-cols-6 mb-3 px-16 font-semibold text-gray-500 text-[14px]">
+          <div className="grid  grid-cols-6 mb-3 px-16  text-gray-500 text-[16px] outfit-uniqueClass">
             <p className=" col-span-3 text-left">Name</p>
             <p className="col-span-1 text-center">Category</p>
             <p className="col-span-1 text-center">Type</p>
@@ -158,7 +158,7 @@ const CategoryList = ({ setLoading }) => {
           {category.map((item, index) => (
             <div key={index}>
               <div className="px-3 ">
-                <ul className="grid  grid-cols-6 capitalize px-8 items-center bg-slate-100 py-1 font-semibold text-[14px] border-b-2 border-slate-300 rounded ">
+                <ul className="grid  grid-cols-6 capitalize px-8 items-center bg-slate-100 py-1  text-[16px] border-b-2 border-slate-300 rounded outfit-uniqueClass">
                   <li className="col-span-3 text-left ">{item.name}</li>
                   <li className="col-span-1 text-center">
                     {item.parentCategory}
@@ -186,7 +186,7 @@ const CategoryList = ({ setLoading }) => {
       </div>
       {editCategoryForm && (
         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50">
-          <div className="bg-white p-5 rounded shadow-md w-1/3 m-auto relative">
+          <div className="bg-white p-5 rounded shadow-md w-1/3 m-auto relative outfit-uniqueClass">
             <div className="flex justify-between items-center mb-3">
               <h2 className="text-[23px] font-semibold text-[#af5f87]">
                 Edit Category

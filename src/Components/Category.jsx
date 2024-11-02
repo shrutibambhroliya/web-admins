@@ -60,7 +60,7 @@ const Category = ({ setLoading }) => {
 
       setLoading(true);
     } catch (error) {
-      console.log("error creating category");
+      console.log("error creating category", error);
     } finally {
       setTimeout(() => {
         setLoading(false);
@@ -71,7 +71,10 @@ const Category = ({ setLoading }) => {
   return (
     <div className="">
       <div className="px-[75px] py-[30px]">
-        <form onSubmit={createCategory} className="flex flex-col gap-3">
+        <form
+          onSubmit={createCategory}
+          className="flex flex-col gap-3 outfit-uniqueClass"
+        >
           <h2 className="mb-2 text-[35px]">Create New Category</h2>
 
           <div>
@@ -101,6 +104,9 @@ const Category = ({ setLoading }) => {
               onChange={(e) => setParentCategory(e.target.value)}
               className="prox border border-gray-300  px-3 py-2 rounded"
             >
+              <option value="" className="outfit-uniqueClass">
+                Select Category
+              </option>
               {parCat.map((item) => (
                 <option key={item} value={item}>
                   {item}
@@ -115,6 +121,9 @@ const Category = ({ setLoading }) => {
               onChange={(e) => setType(e.target.value)}
               className="prox border border-gray-300  px-3 py-2 rounded"
             >
+              <option value="" className="outfit-uniqueClass">
+                Select Type
+              </option>
               {categoryType.map((item) => (
                 <option key={item} value={item}>
                   {item}

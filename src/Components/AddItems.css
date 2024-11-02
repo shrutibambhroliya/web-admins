@@ -1,4 +1,11 @@
 
+.outfit-uniqueClass {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Use 100, 300, 400, 500, 700, etc. */
+  font-style: normal;
+}
+
 .container-btn-file {
     position: relative;
     align-items: center;

@@ -1,4 +1,16 @@
-/* From Uiverse.io by SchawnnahJ */ 
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.5); /* Background overlay */
+    z-index: 50;
+  }
 .loader {
     position: relative;
     width: 2.5em;

@@ -20,9 +20,9 @@ const HomePage = () => {
   const renderComponents = () => {
     switch (activeLink) {
       case "addItems":
-        return <AddItems />;
+        return <AddItems setLoading={setLoading} />;
       case "listItems":
-        return <ListItems />;
+        return <ListItems setLoading={setLoading} />;
       case "category":
         return <Category setLoading={setLoading} />;
       case "categoryList":
@@ -80,7 +80,7 @@ const HomePage = () => {
               onClick={() => handleLinkClick("addItems")}
             >
               <i className="bx bx-plus-circle text-[25px]"></i>
-              <p>Add items</p>
+              <p className="outfit-uniqueClass">Add items</p>
             </a>
             <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
@@ -92,7 +92,7 @@ const HomePage = () => {
               onClick={() => handleLinkClick("category")}
             >
               <i className="bx bx-list-plus text-[25px]"></i>
-              <p>Create Category </p>
+              <p className="outfit-uniqueClass">Create Category </p>
             </a>
             <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
@@ -104,7 +104,7 @@ const HomePage = () => {
               onClick={() => handleLinkClick("categoryList")}
             >
               <i className="bx bx-list-plus text-[25px]"></i>
-              <p> Category-List </p>
+              <p className="outfit-uniqueClass"> Category-List </p>
             </a>
             <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
@@ -116,7 +116,7 @@ const HomePage = () => {
               onClick={() => handleLinkClick("listItems")}
             >
               <i className="bx bx-list-check text-[25px]"></i>
-              <p>List Items</p>
+              <p className="outfit-uniqueClass">List Items</p>
             </a>
 
             <a
@@ -129,7 +129,7 @@ const HomePage = () => {
               onClick={() => handleLinkClick("orders")}
             >
               <i className="bx bx-list-check text-[25px]"></i>
-              <p>Orders</p>
+              <p className="outfit-uniqueClass">Orders</p>
             </a>
           </div>
         </div>
