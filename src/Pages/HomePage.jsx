@@ -23,10 +23,10 @@ const HomePage = () => {
         return <AddItems setLoading={setLoading} />;
       case "listItems":
         return <ListItems setLoading={setLoading} />;
-      case "category":
-        return <Category setLoading={setLoading} />;
-      case "categoryList":
-        return <CategoryList setLoading={setLoading} />;
+      // case "category":
+      //   return <Category setLoading={setLoading} />;
+      // case "categoryList":
+      //   return <CategoryList setLoading={setLoading} />;
       case "orders":
         return <Orders />;
       default:
@@ -82,7 +82,7 @@ const HomePage = () => {
               <i className="bx bx-plus-circle text-[25px]"></i>
               <p className="outfit-uniqueClass">Add items</p>
             </a>
-            <a
+            {/* <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
                 activeLink === "category"
                   ? "bg-[#FFEBF5] border border-pink-400"
@@ -93,8 +93,8 @@ const HomePage = () => {
             >
               <i className="bx bx-list-plus text-[25px]"></i>
               <p className="outfit-uniqueClass">Create Category </p>
-            </a>
-            <a
+            </a> */}
+            {/* <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
                 activeLink === "categoryList"
                   ? "bg-[#FFEBF5] border border-pink-400"
@@ -105,7 +105,7 @@ const HomePage = () => {
             >
               <i className="bx bx-list-plus text-[25px]"></i>
               <p className="outfit-uniqueClass"> Category-List </p>
-            </a>
+            </a> */}
             <a
               className={`flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-1 ${
                 activeLink === "listItems"
